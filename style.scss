@@ -6,10 +6,28 @@
     box-sizing: border-box;
 }
 
+
 h1{
     text-align: center;
-
+    border: 1px black solid;
+    
 }
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
 
 
 // The individual slides for the slideshow
@@ -58,3 +76,4 @@ h1{
 .slide5{
     background-color:pink;
 }
+

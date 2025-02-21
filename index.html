@@ -4,44 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script></script>
     <title>Gallery</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Gallery</h1>
+            <h1> Avatar: The Last Airbender Gallery</h1>
         </header>
+       
+        
+    <div class="main">
+        
+    </div>
+
+    <div class="row">
+        <div class="column">
+          <img src="./images/Avatar Korra.jpg" alt="Image 1" width="500" height="300">
+        </div>
+        <div class="column">
+          <img src="./images/Avatar Aang.jpg" alt="Image 2" width="500" height="300">
+        </div>
+        <div class="column">
+          <img src="./images/Avatar Wan.jpg" alt="Image 3" width="500" height="300">
+        </div>
+      </div>
+
+    <div class="row">
+        <div class="column">
+          <img src="./images/Appa Animal.jpg" alt="Image 1" width="500" height="300">
+        </div>
+        <div class="column">
+          <img src="./images/Mako LOK.jpg" alt="Image 2" width="500" height="500">
+        </div>
+        <div class="column">
+          <img src="./images/Avatar-Zuko-Broadsword.png" alt="Image 3" width="500" height="300">
+        </div>
+      </div>
+
+   
 
         <div id="slider">
             <ul class="slides">
-                <li class="slide slide1"><img  height="400" width="720"src=""></li>
-                <li class="slide slide2"><img  height="400" width="720"src=""></li>
-                <li class="slide slide3 "><img  height="400" width="720"src=""></li>
-                <li class="slide slide4"><img  height="400" width="720"src=""></li>
-                <li class="slide slide5"><img  height="400" width="720"src=""></li>
-                <li class="slide slide6"><img  height="400" width="720"src=""></li>
+                <li  class="slide slide1"><img  height="500" width="800"src="./images/Avatar Korra.jpg"></li>
+                <li class="slide slide2"><img  height="400" width="720"src="./images/Avatar Aang.jpg"></li>
+                <li class="slide slide3 "><img  height="400" width="720"src="./images/Avatar Wan.jpg"></li>
+                <li class="slide slide4"><img  height="400" width="720"src="./images/Appa Animal.jpg"></li>
+                <li class="slide slide5"><img  height="400" width="720"src="./images/Mako LOK.jpg"></li>
+                <li class="slide slide6"><img  height="400" width="720"src="./images/Avatar-Zuko-Broadsword.png"></li>
             </ul>
         </div>
     </div>
 
+    <button id="button1">Dark Mode</button>
+    <button id="button2">Silver Mode</button>
     
     <script>
         $(document).ready(function() {
+            $('*').css({
+            background: "silver",
+           }) 
 
+        $("#button1").click(function(){
+                $("*").css({
+                    "background-color":"black",
+                    "color":"white",
+                })
+              })
+
+              $("#button2").click(function(){
+                $("*").css({
+                    "background-color":"silver",
+                    "color":"black",
+                    
+                })
+              })
+
+
+            
 // settings for the slide
 // we need to set the width of the slider so that we know how far it should slide
 var width = 720
 // we want the slider transitions to be 2 seconds long
-var animationSpeed = 2000
+var animationSpeed = 4000
 // Jquery will que up events so make sure that you add your own animation speed to the pause or it will kepp running forever
-var pause = animationSpeed +500
+var pause = animationSpeed + 700
 var currentSlide = 1
 
 // cache the DOM elements
 var $sliderContainer = $('.slides')
 var $slides = $('.slide')
 var interval;
+
 
 // Create a function that will start the slider
 function startSlider(){
@@ -78,6 +132,8 @@ $(document).on("click", startSlider);
 // start the slider when the page is ready
 startSlider()
 })
+
+
     </script>
 
 
