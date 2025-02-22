@@ -24,10 +24,53 @@ h1{
     padding: 10px;
   }
   
+  .image-container:hover img {
+
+    transform: scale(0.9); /* Increases size by 10% */
+
+}
   img {
     width: 100%;
     height: auto;
+    
   }
+
+// Main slideshow container that is centered and the width of it is at 80%
+#main {
+    width: 80%;                 
+    margin: 0 auto;            
+    overflow: hidden;           
+    text-align: center;          
+// Thia makes the main image responsive and the height of the image stays the same throught, the corners of the images are rounded and when clicking the thumbnails, the image smoothly transitions to the next
+    #main-image {
+        width: 100%;         
+        height: auto;           
+        border-radius: 10px;    
+        transition: transform 0.3s ease;  
+    }
+}
+
+// all the images have a thumbnail container and they are all in a row below the slideshow. There is a gap of 10 px between each one and they are centered.
+#image-thumbnails {
+    display: flex;               
+    justify-content: center;     
+    gap: 10px;                  
+    margin-top: 20px;            
+
+    // This makes it that the thumbnail on the images are set to 60px. These also have rounded corners
+    .thumbnail {
+        width: 60px;          
+        height: auto;            
+        border-radius: 5px;      
+        transition: transform 0.3s ease, opacity 0.3s ease; 
+// When you hover over the image the image enlarges a little
+        &:hover {
+            transform: scale(1.1);    // Slightly enlarge thumbnail on hover
+            opacity: 0.8;             // Slight opacity change on hover
+        }
+    }
+}
+
 
 
 // The individual slides for the slideshow
@@ -37,6 +80,7 @@ h1{
     height:400px;
     overflow:hidden;
     margin:auto;
+    
 
     .slides{
         // Area for the slides horizontally(container)
@@ -44,9 +88,9 @@ h1{
         width:6000px;
         height:400px;
         margin:0;
-        padding:0;
+        padding:0;        
     }
-
+   
     .slide{
         // Each slide
         float:left;
@@ -76,4 +120,5 @@ h1{
 .slide5{
     background-color:pink;
 }
+
 
